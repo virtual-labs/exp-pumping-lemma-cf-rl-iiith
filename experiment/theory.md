@@ -1,5 +1,3 @@
-# Theory
-
 ## Introduction
 
 The Pumping Lemma is a fundamental result in formal language theory that provides necessary conditions for languages to belong to specific classes in the Chomsky hierarchy. There are two primary versions: one for regular languages and another for context-free languages. These lemmas are essential tools for proving that certain languages do not belong to these classes.
