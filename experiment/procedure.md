@@ -1,5 +1,3 @@
-# Procedure
-
 ## Overview
 This simulation demonstrates the pumping lemma for both regular and context-free languages through interactive string decomposition and pumping analysis. Follow these steps to explore how pumping conditions apply to different language types and understand when languages violate these fundamental constraints.
 
