@@ -2,38 +2,157 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What are the two main constraints that must be satisfied in the pumping lemma for regular languages?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "|xy| ≤ p and |z| ≥ 1",
+        "b": "|xy| ≤ p and |y| ≥ 1", 
+        "c": "|xyz| ≤ p and |y| ≥ 1",
+        "d": "|y| ≤ p and |xy| ≥ 1"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. The constraint is on |y| being at least 1, not |z|.",
+        "b": "Correct. The pumping lemma for regular languages requires that |xy| ≤ p (the prefix xy has length at most p) and |y| ≥ 1 (the pumpable part y is non-empty).",
+        "c": "Incorrect. The constraint is |xy| ≤ p, not |xyz| ≤ p.",
+        "d": "Incorrect. This reverses the constraints incorrectly."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In the pumping lemma for context-free languages, how many parts is a string decomposed into?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Three parts: x, y, z",
+        "b": "Four parts: u, v, w, x",
+        "c": "Five parts: u, v, w, x, y",
+        "d": "Two parts: left and right"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Three parts (xyz) is the decomposition for regular languages.",
+        "b": "Incorrect. Four parts would be incomplete for context-free language analysis.",
+        "c": "Correct. The pumping lemma for context-free languages uses a five-part decomposition: w = uvwxy, where v and x are the pumpable segments.",
+        "d": "Incorrect. Two parts would be insufficient for pumping lemma analysis."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What does pumping count i = 0 represent in pumping lemma applications?",
+      "answers": {
+        "a": "The original string with no changes",
+        "b": "Doubling the pumpable segments",
+        "c": "Deleting the pumpable segments entirely",
+        "d": "Adding one extra copy of the pumpable segments"
+      },
+      "explanations": {
+        "a": "Incorrect. i = 1 represents the original string with no changes.",
+        "b": "Incorrect. i = 2 would represent doubling the pumpable segments.",
+        "c": "Correct. When i = 0, the pumpable segments (y in regular languages, or v and x in context-free languages) are removed entirely, testing whether the language still accepts the reduced string.",
+        "d": "Incorrect. i = 2 would add one extra copy beyond the original."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is the language L = {a^n b^n | n ≥ 0} not regular according to the pumping lemma?",
+      "answers": {
+        "a": "Because it contains infinitely many strings",
+        "b": "Because pumping the 'y' segment creates unequal numbers of a's and b's",
+        "c": "Because the string is too long to analyze",
+        "d": "Because it uses two different symbols"
+      },
+      "explanations": {
+        "a": "Incorrect. Many regular languages also contain infinitely many strings.",
+        "b": "Correct. For any string a^p b^p with decomposition xyz where |xy| ≤ p, the y segment must consist only of a's. Pumping y (repeating it) creates more a's than b's, violating the equal-count requirement and proving the string is no longer in the language.",
+        "c": "Incorrect. String length is not the determining factor for regularity.",
+        "d": "Incorrect. Regular languages can use multiple symbols."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In the context-free pumping lemma, what is the constraint on the middle portion 'vwx'?",
+      "answers": {
+        "a": "|vwx| must be exactly equal to p",
+        "b": "|vwx| must be greater than p",
+        "c": "|vwx| must be less than or equal to p",
+        "d": "|vwx| can be any length"
+      },
+      "explanations": {
+        "a": "Incorrect. The constraint is an upper bound, not an exact equality.",
+        "b": "Incorrect. This would violate the pumping lemma constraint.",
+        "c": "Correct. The context-free pumping lemma requires |vwx| ≤ p, meaning the middle portion containing the pumpable segments must have length at most p.",
+        "d": "Incorrect. There is a specific length constraint on this portion."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What must be true about the segments 'v' and 'x' in context-free language pumping?",
+      "answers": {
+        "a": "Both v and x must be non-empty",
+        "b": "At least one of v or x must be non-empty",
+        "c": "Both v and x must be empty",
+        "d": "v and x must have equal lengths"
+      },
+      "explanations": {
+        "a": "Incorrect. The constraint allows one of them to be empty, just not both.",
+        "b": "Correct. The constraint |vx| ≥ 1 means that at least one of v or x must be non-empty, ensuring that pumping actually changes the string.",
+        "c": "Incorrect. If both were empty, pumping would have no effect.",
+        "d": "Incorrect. There is no requirement for v and x to have equal lengths."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How can the pumping lemma be used to prove that a language is NOT regular or context-free?",
+      "answers": {
+        "a": "By showing that the language satisfies all pumping conditions",
+        "b": "By finding one string that can be successfully pumped",
+        "c": "By proving that for any proposed decomposition, pumping violates language membership",
+        "d": "By demonstrating that the language has finite size"
+      },
+      "explanations": {
+        "a": "Incorrect. Satisfying pumping conditions doesn't prove non-membership; the lemma provides necessary but not sufficient conditions.",
+        "b": "Incorrect. One successful pumping example doesn't prove anything about the entire language.",
+        "c": "Correct. To prove a language is not regular/context-free, you assume it is, apply the pumping lemma to get a decomposition, then show that for ALL possible decompositions of a carefully chosen string, pumping produces a string outside the language.",
+        "d": "Incorrect. Language size is not directly related to regularity or context-freeness."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Why does the language {a^n b^n c^n | n ≥ 0} fail the pumping lemma for context-free languages?",
+      "answers": {
+        "a": "Because it has three different symbols",
+        "b": "Because pumping cannot maintain equal counts of all three symbols simultaneously",
+        "c": "Because the strings are too long",
+        "d": "Because it's actually a regular language"
+      },
+      "explanations": {
+        "a": "Incorrect. The number of symbols doesn't determine context-freeness.",
+        "b": "Correct. Given the constraint |vwx| ≤ p, the segments v and x can span at most two of the three symbol types (a, b, c). Pumping v and x the same number of times cannot increase all three symbol counts equally, violating the language's requirement for equal counts.",
+        "c": "Incorrect. String length itself doesn't determine language class membership.",
+        "d": "Incorrect. This language is neither regular nor context-free; it's context-sensitive."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the fundamental reason why pumping lemmas provide necessary but not sufficient conditions for language classification?",
+      "answers": {
+        "a": "Because the lemmas are incorrectly formulated",
+        "b": "Because some non-regular/non-CF languages may still satisfy pumping conditions",
+        "c": "Because pumping can only be applied to finite languages",
+        "d": "Because the lemmas work only for binary alphabets"
+      },
+      "explanations": {
+        "a": "Incorrect. The pumping lemmas are correctly formulated and widely accepted results.",
+        "b": "Correct. The pumping lemmas provide necessary conditions (if a language is regular/CF, then it must satisfy pumping), but not sufficient conditions. Some languages that are not regular or context-free might still satisfy the pumping conditions, so the lemmas can only be used to prove non-membership, not membership.",
+        "c": "Incorrect. Pumping lemmas apply to infinite languages.",
+        "d": "Incorrect. The lemmas work for any finite alphabet."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }
