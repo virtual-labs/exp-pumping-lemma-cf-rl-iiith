@@ -1,0 +1,273 @@
+/* Interactive Elements Specific Styles */
+
+/* Enhanced String Visualization */
+.string-segment {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.string-segment:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.string-segment.segment-x:hover { box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3); }
+.string-segment.segment-y:hover { box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3); }
+.string-segment.segment-z:hover { box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3); }
+.string-segment.segment-u:hover { box-shadow: 0 4px 8px rgba(147, 51, 234, 0.3); }
+.string-segment.segment-v:hover { box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3); }
+.string-segment.segment-w:hover { box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3); }
+
+/* Dynamic Animations */
+.string-segment.pumping {
+  animation: pump-animation 0.8s ease-in-out;
+}
+
+@keyframes pump-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); background-color: #fbbf24; }
+  100% { transform: scale(1); }
+}
+
+/* Interactive Feedback */
+.slider:hover {
+  background: #d1d5db;
+}
+
+.slider:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+.slider:active::-moz-range-thumb {
+  transform: scale(1.2);
+}
+
+/* Enhanced Button Interactions */
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Validation States */
+.input-valid {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1) !important;
+}
+
+.input-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: loading-animation 1.5s infinite;
+}
+
+@keyframes loading-animation {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Tooltips */
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.tooltip:hover::before {
+  opacity: 1;
+}
+
+/* Error States */
+.error-message {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #fecaca;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #bbf7d0;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Enhanced Results Display */
+.result-item {
+  transition: all 0.3s ease;
+}
+
+.result-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Indicators */
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8b5cf6, #06d6a0);
+  transition: width 0.3s ease;
+}
+
+/* Modal-like overlays for detailed analysis */
+.analysis-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.analysis-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.analysis-modal {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.analysis-overlay.active .analysis-modal {
+  transform: translateY(0);
+}
+
+/* Segment Labels */
+.segment-label {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+  background: white;
+  padding: 1px 4px;
+  border-radius: 2px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Interactive Constraints Indicator */
+.constraint-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 8px;
+  position: relative;
+}
+
+.constraint-satisfied {
+  background: #10b981;
+}
+
+.constraint-violated {
+  background: #ef4444;
+  animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Formula Display Enhancement */
+.formula-display {
+  font-family: 'Courier New', monospace;
+  background: #f8fafc;
+  padding: 8px;
+  border-radius: 4px;
+  border-left: 3px solid #8b5cf6;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.formula-variables {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments for Interactive Elements */
+@media (max-width: 768px) {
+  .string-segment {
+    font-size: 14px;
+    padding: 3px 5px;
+  }
+  
+  .tooltip::before {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  
+  .analysis-modal {
+    margin: 20px;
+    padding: 16px;
+  }
+}
