@@ -1,0 +1,92 @@
+
+/home/runner/work/exp-pumping-lemma-cf-rl-iiith/exp-pumping-lemma-cf-rl-iiith/experiment/simulation/js/data.js
+  168:38  warning  'module' is not defined  no-undef
+  169:3   warning  'module' is not defined  no-undef
+
+/home/runner/work/exp-pumping-lemma-cf-rl-iiith/exp-pumping-lemma-cf-rl-iiith/experiment/simulation/js/helper.js
+    6:10  warning  'validateRegularDecomposition' is defined but never used  no-unused-vars
+   33:10  warning  'validateCFDecomposition' is defined but never used       no-unused-vars
+   60:10  warning  'pumpRegularString' is defined but never used             no-unused-vars
+   70:10  warning  'pumpCFString' is defined but never used                  no-unused-vars
+   80:10  warning  'testStringMembership' is defined but never used          no-unused-vars
+   81:20  warning  'LANGUAGE_DEFINITIONS' is not defined                     no-undef
+   97:10  warning  'generateSampleString' is defined but never used          no-unused-vars
+   98:20  warning  'EXAMPLE_STRINGS' is not defined                          no-undef
+   99:20  warning  'LANGUAGE_DEFINITIONS' is not defined                     no-undef
+  112:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  113:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  117:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  121:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  125:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  126:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  127:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  128:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  132:7   warning  Unexpected lexical declaration in case block              no-case-declarations
+  143:10  warning  'analyzePumpingResults' is defined but never used         no-unused-vars
+  143:54  warning  'decomposition' is defined but never used                 no-unused-vars
+  144:20  warning  'LANGUAGE_DEFINITIONS' is not defined                     no-undef
+  153:9   warning  'allAccepted' is assigned a value but never used          no-unused-vars
+  176:10  warning  'formatStringWithSegments' is defined but never used      no-unused-vars
+  203:10  warning  'suggestOptimalDecomposition' is defined but never used   no-unused-vars
+  204:20  warning  'LANGUAGE_DEFINITIONS' is not defined                     no-undef
+  205:9   warning  'pumpingLength' is assigned a value but never used        no-unused-vars
+  255:10  warning  'getConstraintStatus' is defined but never used           no-unused-vars
+  256:20  warning  'LANGUAGE_DEFINITIONS' is not defined                     no-undef
+  263:19  warning  'z' is assigned a value but never used                    no-unused-vars
+  287:13  warning  'u' is assigned a value but never used                    no-unused-vars
+  287:25  warning  'y' is assigned a value but never used                    no-unused-vars
+  318:10  warning  'escapeHtml' is defined but never used                    no-unused-vars
+  327:10  warning  'debounce' is defined but never used                      no-unused-vars
+
+/home/runner/work/exp-pumping-lemma-cf-rl-iiith/exp-pumping-lemma-cf-rl-iiith/experiment/simulation/js/interactive.js
+   37:47  warning  'debounce' is not defined                               no-undef
+  104:45  warning  'e' is defined but never used                           no-unused-vars
+  113:45  warning  'e' is defined but never used                           no-unused-vars
+  129:20  warning  'LANGUAGE_DEFINITIONS' is not defined                   no-undef
+  149:26  warning  'generateSampleString' is not defined                   no-undef
+  159:28  warning  'generateSampleString' is not defined                   no-undef
+  209:11  warning  'zLength' is assigned a value but never used            no-unused-vars
+  213:11  warning  'actualZLength' is assigned a value but never used      no-unused-vars
+  236:11  warning  'yLengthCalculated' is assigned a value but never used  no-unused-vars
+  247:13  warning  'adjustedY' is assigned a value but never used          no-unused-vars
+  288:18  warning  'formatStringWithSegments' is not defined               no-undef
+  303:18  warning  'formatStringWithSegments' is not defined               no-undef
+  315:22  warning  'LANGUAGE_DEFINITIONS' is not defined                   no-undef
+  321:11  warning  'status' is assigned a value but never used             no-unused-vars
+  321:20  warning  'getConstraintStatus' is not defined                    no-undef
+  333:22  warning  'pumpRegularString' is not defined                      no-undef
+  336:22  warning  'pumpCFString' is not defined                           no-undef
+  352:7   warning  'swal' is not defined                                   no-undef
+  356:20  warning  'testStringMembership' is not defined                   no-undef
+  384:24  warning  'pumpRegularString' is not defined                      no-undef
+  387:24  warning  'pumpCFString' is not defined                           no-undef
+  390:32  warning  'testStringMembership' is not defined                   no-undef
+  431:22  warning  'analyzePumpingResults' is not defined                  no-undef
+  466:5   warning  'pumpingController' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-pumping-lemma-cf-rl-iiith/exp-pumping-lemma-cf-rl-iiith/experiment/simulation/js/interactive_new.js
+    10:15  warning  'LANGUAGE_DEFINITIONS' is not defined      no-undef
+   229:7   warning  'Swal' is not defined                      no-undef
+   516:11  warning  'yLen' is assigned a value but never used  no-unused-vars
+   587:9   warning  'Swal' is not defined                      no-undef
+   742:7   warning  'Swal' is not defined                      no-undef
+   814:7   warning  'Swal' is not defined                      no-undef
+  1043:7   warning  'Swal' is not defined                      no-undef
+  1137:7   warning  'Swal' is not defined                      no-undef
+
+/home/runner/work/exp-pumping-lemma-cf-rl-iiith/exp-pumping-lemma-cf-rl-iiith/experiment/simulation/js/main.js
+   53:39  warning  'e' is defined but never used  no-unused-vars
+  195:3   warning  'swal' is not defined          no-undef
+  316:3   warning  'swal' is not defined          no-undef
+  335:3   warning  'swal' is not defined          no-undef
+  350:3   warning  'swal' is not defined          no-undef
+  379:38  warning  'module' is not defined        no-undef
+  380:3   warning  'module' is not defined        no-undef
+
+/home/runner/work/exp-pumping-lemma-cf-rl-iiith/exp-pumping-lemma-cf-rl-iiith/experiment/simulation/mobile_detection.js
+  393:7   warning  'mobileDetection' is assigned a value but never used  no-unused-vars
+  396:38  warning  'module' is not defined                               no-undef
+  397:3   warning  'module' is not defined                               no-undef
+
+✖ 77 problems (0 errors, 77 warnings)
+

@@ -1,0 +1,3 @@
+To explore the structural limitations of formal language classes through the application of pumping lemmas. The experiment demonstrates how pumping properties serve as necessary conditions for language membership in regular and context-free classes, providing insight into the hierarchical organization of formal languages.
+
+The focus is on understanding string decomposition constraints and the systematic application of pumping conditions to determine language classification. Through examination of specific examples, the experiment illustrates how certain languages violate pumping requirements, establishing boundaries between different classes in the Chomsky hierarchy.

@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "After using the simulation, how did adjusting the decomposition sliders help you understand pumping constraints?",
+      "answers": {
+        "a": "The sliders had no impact on understanding pumping",
+        "b": "Moving sliders showed how constraint violations are immediately detected and highlighted",
+        "c": "Sliders only affected the visual appearance without educational value",
+        "d": "The simulation worked the same regardless of slider positions"
+      },
+      "explanations": {
+        "a": "Incorrect. The interactive sliders are central to understanding how decomposition affects pumping validity.",
+        "b": "Correct. The simulation provides real-time feedback when slider adjustments violate constraints like |xy| ≤ p or |y| ≥ 1, helping students immediately see the boundaries and limitations of valid decompositions.",
+        "c": "Incorrect. The sliders demonstrate fundamental theoretical concepts through hands-on manipulation.",
+        "d": "Incorrect. Different slider positions create different decompositions with varying validity."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What did you observe when testing pumping with i = 0 (deletion) versus i > 1 (repetition)?",
+      "answers": {
+        "a": "Both operations always produced the same results",
+        "b": "Only i > 1 could violate language membership",
+        "c": "Both deletion and repetition can reveal language violations in different ways",
+        "d": "i = 0 never affects the string"
+      },
+      "explanations": {
+        "a": "Incorrect. Deletion and repetition often produce different results and reveal different aspects of language structure.",
+        "b": "Incorrect. Deletion (i = 0) can also violate language membership requirements.",
+        "c": "Correct. The simulation demonstrates that both deletion (i = 0) and repetition (i > 1) can violate language membership. For example, deleting the pumpable segment might destroy required patterns, while excessive repetition might create invalid structures.",
+        "d": "Incorrect. i = 0 removes the pumpable segments, significantly affecting the string."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How did comparing regular language pumping (xyz) with context-free pumping (uvwxy) enhance your understanding?",
+      "answers": {
+        "a": "The two models showed identical behavior in all cases",
+        "b": "Context-free pumping revealed more complex constraint relationships and simultaneous pumping requirements",
+        "c": "Regular pumping was always more restrictive than context-free pumping",
+        "d": "The comparison showed no meaningful differences"
+      },
+      "explanations": {
+        "a": "Incorrect. The two pumping models have different structures and constraints.",
+        "b": "Correct. The simulation demonstrates that context-free pumping involves more complex relationships: five-part decomposition, simultaneous pumping of two segments (v and x), and different constraint boundaries (|vwx| ≤ p vs. |xy| ≤ p).",
+        "c": "Incorrect. The restrictions are different in nature, not simply more or less restrictive.",
+        "d": "Incorrect. The comparison reveals fundamental structural differences between language classes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "When you tested the 'a^n b^n c^n' language, what did the simulation reveal about why it fails the context-free pumping lemma?",
+      "answers": {
+        "a": "The string was too short for meaningful analysis",
+        "b": "The constraint |vwx| ≤ p limits pumping to at most two symbol types, making equal triple counts impossible",
+        "c": "The language actually passed all pumping tests",
+        "d": "Only certain decompositions failed, others succeeded"
+      },
+      "explanations": {
+        "a": "Incorrect. The simulation can analyze strings of sufficient length for this language.",
+        "b": "Correct. The simulation demonstrates that because |vwx| ≤ p, the pumpable segments v and x can span at most two of the three symbol types (a, b, c). Pumping these segments cannot maintain equal counts of all three symbols simultaneously, proving the language is not context-free.",
+        "c": "Incorrect. This language is specifically designed to fail context-free pumping tests.",
+        "d": "Incorrect. The language systematically fails for all valid decompositions."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How did the 'Test All' feature help you understand systematic pumping analysis?",
+      "answers": {
+        "a": "It only tested one pumping value at a time",
+        "b": "It showed that pumping behavior is random and unpredictable",
+        "c": "It demonstrated comprehensive testing across multiple pumping values to identify patterns and violations",
+        "d": "The feature didn't provide useful information"
+      },
+      "explanations": {
+        "a": "Incorrect. 'Test All' systematically tests multiple pumping values (typically i = 0, 1, 2, 3, 4, 5).",
+        "b": "Incorrect. Pumping behavior follows deterministic patterns based on language structure.",
+        "c": "Correct. The 'Test All' feature demonstrates the importance of comprehensive testing by showing results for multiple pumping values simultaneously, revealing patterns like 'works for small i but fails for large i' or 'consistent violations across all i > 0'.",
+        "d": "Incorrect. This feature provides crucial insights into systematic pumping analysis."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What insight did you gain about the relationship between string length and pumping effectiveness?",
+      "answers": {
+        "a": "String length has no impact on pumping analysis",
+        "b": "Longer strings always make pumping more successful",
+        "c": "Strings must exceed the pumping length threshold for meaningful analysis, and longer strings provide more decomposition options",
+        "d": "Shorter strings are always easier to analyze"
+      },
+      "explanations": {
+        "a": "Incorrect. String length is fundamental to pumping lemma applications.",
+        "b": "Incorrect. Length alone doesn't determine pumping success; language structure is crucial.",
+        "c": "Correct. The simulation demonstrates that strings must be at least as long as the pumping length p for the lemma to apply, and longer strings provide more flexibility in choosing decomposition boundaries while potentially revealing more violation opportunities.",
+        "d": "Incorrect. Shorter strings may not meet pumping length requirements for analysis."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How did observing constraint violations in real-time change your approach to decomposition strategy?",
+      "answers": {
+        "a": "Violations appeared randomly without pattern",
+        "b": "Real-time feedback helped identify which decomposition choices lead to valid pumping and which violate constraints",
+        "c": "Constraint violations were never clearly indicated",
+        "d": "The simulation always prevented constraint violations"
+      },
+      "explanations": {
+        "a": "Incorrect. Constraint violations follow predictable patterns based on decomposition choices.",
+        "b": "Correct. The real-time constraint checking helps students immediately understand the consequences of their decomposition choices, learning which boundary selections violate |xy| ≤ p, |y| ≥ 1, |vwx| ≤ p, or |vx| ≥ 1 constraints, leading to more strategic thinking.",
+        "c": "Incorrect. The simulation provides clear visual and textual feedback about violations.",
+        "d": "Incorrect. The simulation allows violations to demonstrate why certain decompositions are invalid."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What did the simulation teach you about choosing effective test strings for pumping lemma proofs?",
+      "answers": {
+        "a": "Any string works equally well for pumping analysis",
+        "b": "Test strings should be chosen to expose structural weaknesses where pumping will likely violate language membership",
+        "c": "Shorter strings are always better for analysis",
+        "d": "Random string selection is the best approach"
+      },
+      "explanations": {
+        "a": "Incorrect. Strategic string choice is crucial for effective pumping lemma application.",
+        "b": "Correct. The simulation demonstrates that effective test strings are those that expose the language's structural constraints - strings where pumping will naturally violate the language's defining properties, such as equal-count requirements or specific patterns.",
+        "c": "Incorrect. Strings must meet minimum length requirements and longer strings often provide better analysis opportunities.",
+        "d": "Incorrect. Strategic, purposeful string selection is essential for successful proofs."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How did experimenting with boundary cases (minimal/maximal decomposition segments) inform your understanding of pumping flexibility?",
+      "answers": {
+        "a": "Boundary cases showed no difference from regular cases",
+        "b": "Boundary testing revealed the limits of decomposition flexibility and constraint requirements",
+        "c": "Minimal segments always worked better than maximal ones",
+        "d": "Boundary cases were impossible to test in the simulation"
+      },
+      "explanations": {
+        "a": "Incorrect. Boundary cases often reveal critical insights about constraint limits and flexibility.",
+        "b": "Correct. Testing boundary cases (like y of length 1 vs. maximal y, or u/y of length 0 vs. maximal length) reveals the practical limits of decomposition flexibility and helps understand how constraints like |xy| ≤ p and |y| ≥ 1 interact with actual string structure.",
+        "c": "Incorrect. The effectiveness depends on language structure and specific constraints, not segment size alone.",
+        "d": "Incorrect. The simulation specifically enables testing of boundary conditions through slider manipulation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}

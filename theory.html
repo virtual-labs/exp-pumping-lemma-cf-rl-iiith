@@ -1,0 +1,601 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IIITH',
+        'phase': 'Testing',
+        'expName': 'PUMPING LEMMA FOR CF AND RL',
+        'expShortName': 'pumping-lemma-cf-rl'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="pumping-lemma-cf-rl">
+    	<meta name="developer-institute" content="IIITH">
+    	<meta name="learning-unit" content="PUMPING LEMMA FOR CF AND RL">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="pumping-lemma-cf-rl" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] PUMPING LEMMA FOR CF AND RL" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IIITH&quot;,&quot;expname&quot;:&quot;PUMPING LEMMA FOR CF AND RL&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="contributors.html" class="p-2 ">
+                                      Contributors
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="contributors.html" class="p-2 ">
+                        Contributors
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="pumping-lemma-for-cf-and-rl">Pumping Lemma for CF and RL</h2>
+          
+            </div>
+              <h2 id="introduction">Introduction</h2>
+          <p>The Pumping Lemma is a fundamental result in formal language theory that provides necessary conditions for languages to belong to specific classes in the Chomsky hierarchy. There are two primary versions: one for regular languages and another for context-free languages. These lemmas are essential tools for proving that certain languages do not belong to these classes.</p>
+          <h2 id="pumping-lemma-for-regular-languages">Pumping Lemma for Regular Languages</h2>
+          <h3 id="statement">Statement</h3>
+          <p>If L is a regular language, then there exists a positive integer p (called the pumping length) such that for any string w ∈ L with |w| ≥ p, w can be divided into three parts: w = xyz, satisfying:</p>
+          <ol>
+          <li><strong>|xy| ≤ p</strong> (the prefix xy has length at most p)</li>
+          <li><strong>|y| ≥ 1</strong> (the middle part y is non-empty)</li>
+          <li><strong>xy^i z ∈ L</strong> for all i ≥ 0 (pumping y any number of times keeps the string in L)</li>
+          </ol>
+          <h3 id="intuition">Intuition</h3>
+          <p>The pumping lemma for regular languages arises from the finite nature of automata. Since a DFA has only finitely many states, any sufficiently long string must cause the automaton to visit some state more than once, creating a loop. This loop corresponds to the pumpable portion y.</p>
+          <h3 id="the-pigeonhole-principle">The pigeonhole principle</h3>
+          <p>The pigeonhole principle is a very simple counting fact: if you put more items (pigeons) into fewer boxes (holes), at least one box must contain more than one item. For example, if three socks are placed into two drawers, one drawer must hold at least two socks. 
+          In the context of automata, think of the DFA's states as the "holes" and positions in an input prefix as the "pigeons." If you read p+1 input positions but the DFA has only p states, some state must repeat — that repeated state marks a loop (the pumpable substring).</p>
+          <h3 id="intuition-with-pigeonhole-principle">Intuition with pigeonhole principle</h3>
+          <p>One simple and illuminating way to understand the pumping lemma — emphasised by Kozen — is to view it as a direct application of the pigeonhole principle rather than a mysterious quantified statement.</p>
+          <ul>
+          <li>Suppose a language L were accepted by a DFA with p states. Consider any input w of length at least p (for example, take w = a^p b^p when analysing L = {a^n b^n}).</li>
+          <li>As the DFA reads the first p+1 symbols of w, it visits p+1 positions but only p states. By the pigeonhole principle some state is visited at least twice while reading that prefix. The portion of the input consumed between those two visits is a non-empty string y that takes the automaton from the repeated state back to itself — a loop.</li>
+          <li>Because this segment y corresponds to a cycle in the DFA, repeating it any number of times (including 0 times) does not affect the rest of the run: the automaton traverses the same states before and after the loop. That is precisely why xy^i z is accepted whenever xyz is accepted.</li>
+          </ul>
+          <p>This approach avoids heavy quantifier notation: pick a long enough witness string, apply pigeonhole to find a repeated state and a non-empty looping substring y, then show pumping y preserves acceptance. For languages like {a^n b^n} the loop must occur inside the a-block, so pumping changes the number of a's but not b's, producing a contradiction.</p>
+          <h3 id="proof-strategy">Proof Strategy</h3>
+          <p>To prove a language is not regular using the pumping lemma:</p>
+          <ol>
+          <li>Assume the language L is regular</li>
+          <li>Let p be the pumping length guaranteed by the lemma</li>
+          <li>Choose a specific string w ∈ L with |w| ≥ p</li>
+          <li>Show that for any decomposition w = xyz satisfying the constraints, there exists some i ≥ 0 such that xy^i z ∉ L</li>
+          <li>This contradiction proves L is not regular</li>
+          </ol>
+          <h2 id="pumping-lemma-for-context-free-languages">Pumping Lemma for Context-Free Languages</h2>
+          <h3 id="statement-1">Statement</h3>
+          <p>If L is a context-free language, then there exists a positive integer p (pumping length) such that for any string w ∈ L with |w| ≥ p, w can be divided into five parts: w = uvwxy, satisfying:</p>
+          <ol>
+          <li><strong>|vwx| ≤ p</strong> (the middle portion vwx has length at most p)</li>
+          <li><strong>|vx| ≥ 1</strong> (at least one of v or x is non-empty)</li>
+          <li><strong>uv^i wx^i y ∈ L</strong> for all i ≥ 0 (pumping v and x the same number of times keeps the string in L)</li>
+          </ol>
+          <h3 id="intuition-1">Intuition</h3>
+          <p>The context-free pumping lemma has a similar, transparent interpretation when grammars are put into a normal form (e.g., Chomsky Normal Form). The key idea is this:</p>
+          <ul>
+          <li>A context-free grammar has finitely many non-terminal symbols. When deriving a sufficiently long string, any path from the start symbol to a leaf in the parse tree that is longer than the number of non-terminals must repeat some non-terminal symbol.</li>
+          <li>The repeated non-terminal witnesses a pair of subtrees: the lower occurrence derives some substring that can be inserted or removed while keeping the rest of the derivation intact. Repeating or removing that subtree corresponds to pumping the substrings v and x in the standard statement.</li>
+          </ul>
+          <p>This explanation mirrors the pigeonhole reasoning for DFAs: repeated states become repeated non-terminals in parse-tree paths. Kozen presents these ideas in a compact, intuitive way that helps students see the pumping lemmas as simple consequences of finiteness rather than as intimidating logical formulas.</p>
+          <h3 id="key-differences-from-regular-pumping">Key Differences from Regular Pumping</h3>
+          <ul>
+          <li><strong>Five-part decomposition</strong> instead of three-part</li>
+          <li><strong>Two pumpable sections</strong> (v and x) instead of one</li>
+          <li><strong>Simultaneous pumping</strong> requirement (same number of repetitions for both v and x)</li>
+          <li><strong>More complex constraints</strong> reflecting the richer structure of context-free languages</li>
+          </ul>
+          <h2 id="applications-and-examples">Applications and Examples</h2>
+          <h3 id="regular-language-examples">Regular Language Examples</h3>
+          <p><strong>Example 1: L = {a^n b^n | n ≥ 0}</strong></p>
+          <p>This language is not regular. Proof:</p>
+          <ul>
+          <li>Assume L is regular with pumping length p</li>
+          <li>Choose w = a^p b^p ∈ L</li>
+          <li>Any decomposition w = xyz with |xy| ≤ p means y consists only of a's</li>
+          <li>Pumping y creates unequal numbers of a's and b's</li>
+          <li>Therefore xy^2 z ∉ L, contradicting the pumping lemma</li>
+          </ul>
+          <p><strong>Example 2: L = {a^* b^*}</strong></p>
+          <p>This language is regular. For any string w = a^m b^n:</p>
+          <ul>
+          <li>If m ≥ p, let x = a^(p-1), y = a, z = a^(m-p)b^n</li>
+          <li>Pumping y adds more a's, maintaining the a^* b^* pattern</li>
+          <li>All pumped strings remain in L</li>
+          </ul>
+          <h3 id="context-free-language-examples">Context-Free Language Examples</h3>
+          <p><strong>Example 1: L = {a^n b^n | n ≥ 0}</strong></p>
+          <p>This language is context-free. For w = a^n b^n with n ≥ p:</p>
+          <ul>
+          <li>Decompose as u = a^i, v = a^j, w = a^k, x = b^l, y = b^m where j + l ≥ 1</li>
+          <li>Pumping maintains the balance: uv^i wx^i y has equal a's and b's</li>
+          <li>The language satisfies the context-free pumping lemma</li>
+          </ul>
+          <p><strong>Example 2: L = {a^n b^n c^n | n ≥ 0}</strong></p>
+          <p>This language is not context-free. Proof:</p>
+          <ul>
+          <li>Assume L is context-free with pumping length p</li>
+          <li>Choose w = a^p b^p c^p ∈ L</li>
+          <li>Any decomposition has |vwx| ≤ p, so vwx spans at most two of the three letter types</li>
+          <li>Pumping v and x cannot increase all three letter counts equally</li>
+          <li>Therefore uv^2 wx^2 y ∉ L, contradicting the pumping lemma</li>
+          </ul>
+          <h2 id="solved-examples-step-by-step">Solved examples (step-by-step)</h2>
+          <p>Below are a few worked examples that show how to apply the pumping lemmas in practice. Each example highlights a common challenge: choosing the right witness string, locating the pumped portion, and using pumping (often pumping down with i = 0) to derive a contradiction.</p>
+          <h3 id="regular-language--example-a-pumping-down">Regular language — Example A (pumping down)</h3>
+          <p>Language: L = {0^i 1^j | i &gt; j}</p>
+          <p>Claim: L is not regular.</p>
+          <p>Proof (step-by-step):</p>
+          <ul>
+          <li>Assume L is regular and let p be the pumping length provided by the lemma.</li>
+          <li>Choose the witness string s = 0^{p+1} 1^{p}. Note |s| ≥ p.</li>
+          <li>By the lemma, s = xyz with |xy| ≤ p and |y| ≥ 1. Because |xy| ≤ p, the substring y lies entirely inside the initial block of 0's (the first p+1 symbols are all 0's). Thus y = 0^t for some t ≥ 1.</li>
+          <li>Pump down with i = 0: xz = 0^{p+1-t} 1^{p}. Since t ≥ 1 we have p+1-t ≤ p, so the new string has at most p zeros followed by p ones, i.e. the number of 0's is ≤ the number of 1's. That means xz ∉ L (it violates i &gt; j).</li>
+          <li>This contradicts the pumping lemma requirement that xy^i z ∈ L for all i ≥ 0. Therefore L is not regular.</li>
+          </ul>
+          <p>This example shows why pumping down (i = 0) is often powerful: removing the loop can reduce a count that needs to remain strictly larger, producing a clear contradiction.</p>
+          <h3 id="regular-language--example-b-choice-of-pumping-location-matters">Regular language — Example B (choice of pumping location matters)</h3>
+          <p>Language: L = {ww | w ∈ {0,1}^*}</p>
+          <p>Claim: L is not regular.</p>
+          <p>Proof (step-by-step):</p>
+          <ul>
+          <li>Assume L is regular and let p be the pumping length.</li>
+          <li>Choose the witness string s = 0^{p}1^{p}0^{p}1^{p}, which is of the form ww with w = 0^{p}1^{p}.</li>
+          <li>Any decomposition s = xyz with |xy| ≤ p forces y to be entirely inside the first block of 0's (since the first p symbols are 0). Thus y = 0^t with t ≥ 1.</li>
+          <li>Pumping down (i = 0) yields xz in which the first block of 0's has fewer than p symbols while the second block of 0's (the start of the second copy of w) still has p zeros. The two halves can no longer be equal, so xz ∉ L.</li>
+          <li>Contradiction to the lemma — therefore L is not regular.</li>
+          </ul>
+          <p>This example demonstrates why the locating constraint |xy| ≤ p is useful: it pins the pumpable region to a specific part of the witness string so you can reason about how pumping changes structural balances.</p>
+          <h3 id="context-free-language--example-a-detailed">Context-free language — Example A (detailed)</h3>
+          <p>Language: L = {a^n b^n c^n | n ≥ 0}</p>
+          <p>Claim: L is not context-free.</p>
+          <p>Proof (step-by-step):</p>
+          <ul>
+          <li>Assume L is context-free and let p be the pumping length.</li>
+          <li>Choose s = a^{p} b^{p} c^{p}.</li>
+          <li>By the lemma, s = uvwxy where |vwx| ≤ p and |vx| ≥ 1. The substring vwx has length at most p, so it can touch at most two of the three blocks (a^*, b^*, c^*).</li>
+          <li>Consider cases:<ul>
+          <li>vwx lies entirely inside one block (all a's, all b's, or all c's). Pumping changes the count of only that symbol; after pumping (say i = 2 or i = 0) the three counts cannot remain all equal, so the pumped string is not in L.</li>
+          <li>vwx spans two blocks (a &amp; b or b &amp; c). Pumping changes counts in at most those two symbol-types and not the third; again the equal-count requirement breaks for some i.</li>
+          </ul>
+          </li>
+          <li>In all cases we can pick an i (commonly i = 0 or i = 2) so that uv^i wx^i y ∉ L, contradicting the lemma. Hence L is not context-free.</li>
+          </ul>
+          <p>This standard example highlights how the bounded window |vwx| ≤ p forces the pumped region to miss at least one of the three symbol classes, making it impossible to pump while preserving equality across three counts.</p>
+          <h2 id="practical-considerations">Practical Considerations</h2>
+          <h3 id="choosing-test-strings">Choosing Test Strings</h3>
+          <p>Effective use of pumping lemmas requires strategic choice of test strings:</p>
+          <ol>
+          <li><strong>Strings that expose structural constraints</strong> of the language</li>
+          <li><strong>Boundary cases</strong> that highlight critical properties</li>
+          <li><strong>Strings where pumping naturally violates</strong> language membership</li>
+          <li><strong>Examples that force contradictions</strong> across all possible decompositions</li>
+          </ol>
+          <h3 id="common-pitfalls">Common Pitfalls</h3>
+          <ol>
+          <li><strong>Incorrect constraint application</strong>: Forgetting |xy| ≤ p or |vwx| ≤ p limitations</li>
+          <li><strong>Single decomposition testing</strong>: Must show contradiction for ALL possible decompositions</li>
+          <li><strong>Pumping direction confusion</strong>: Remember that i = 0 (deletion) is also required</li>
+          <li><strong>Boundary condition errors</strong>: Careful attention to edge cases and empty strings</li>
+          </ol>
+          <h3 id="simulation-benefits">Simulation Benefits</h3>
+          <p>Interactive simulation helps students:</p>
+          <ul>
+          <li><strong>Visualize decomposition constraints</strong> through adjustable boundaries</li>
+          <li><strong>Experiment with different pumping values</strong> and observe results</li>
+          <li><strong>Test multiple decompositions</strong> systematically</li>
+          <li><strong>Understand violation patterns</strong> through immediate feedback</li>
+          <li><strong>Build intuition</strong> about language structure and limitations</li>
+          </ul>
+          <h2 id="advanced-topics">Advanced Topics</h2>
+          <h3 id="pumping-lemma-limitations">Pumping Lemma Limitations</h3>
+          <p>The pumping lemma provides only <strong>necessary conditions</strong>, not sufficient ones:</p>
+          <ul>
+          <li>A language might satisfy pumping conditions but still not be regular/context-free</li>
+          <li>The lemma cannot prove language membership, only non-membership</li>
+          <li>Some irregular languages may require other proof techniques</li>
+          </ul>
+          <h3 id="extended-applications">Extended Applications</h3>
+          <ul>
+          <li><strong>Context-sensitive languages</strong>: Different pumping-like properties</li>
+          <li><strong>Recursive and recursively enumerable languages</strong>: Computational complexity considerations</li>
+          <li><strong>Practical parsing algorithms</strong>: Understanding limitations in compiler design</li>
+          <li><strong>Language hierarchy</strong>: Systematic classification of formal languages</li>
+          </ul>
+          <h2 id="conclusion">Conclusion</h2>
+          <p>The pumping lemmas are fundamental tools for understanding the boundaries between language classes. Through hands-on experimentation and visualization, students develop both theoretical understanding and practical problem-solving skills essential for formal language theory and computational applications.</p>
+          
+          </div>
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] PUMPING LEMMA FOR CF AND RL" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IIITH&quot;,&quot;expname&quot;:&quot;PUMPING LEMMA FOR CF AND RL&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,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);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-pumping-lemma-cf-rl-iiith/plugins/svc-rating/index.js"></script><script type="module" src="/exp-pumping-lemma-cf-rl-iiith/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>
