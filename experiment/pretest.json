@@ -2,18 +2,18 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What are the two main constraints that must be satisfied in the pumping lemma for regular languages?",
+      "question": "Which two constraints are commonly listed in the pumping lemma for regular languages (used when proving non-regularity)?",
       "answers": {
         "a": "|xy| ≤ p and |z| ≥ 1",
-        "b": "|xy| ≤ p and |y| ≥ 1", 
-        "c": "|xyz| ≤ p and |y| ≥ 1",
+        "b": "|xy| ≤ p and |y| ≥ 1",
+        "c": "There exists a decomposition w = xyz with |y| ≥ 1 and for all i ≥ 0, xy^i z ∈ L",
         "d": "|y| ≤ p and |xy| ≥ 1"
       },
       "explanations": {
-        "a": "Incorrect. The constraint is on |y| being at least 1, not |z|.",
-        "b": "Correct. The pumping lemma for regular languages requires that |xy| ≤ p (the prefix xy has length at most p) and |y| ≥ 1 (the pumpable part y is non-empty).",
-        "c": "Incorrect. The constraint is |xy| ≤ p, not |xyz| ≤ p.",
-        "d": "Incorrect. This reverses the constraints incorrectly."
+        "a": "Incorrect. The non-emptiness requirement applies to |y|, not |z|.",
+        "b": "Correct. The commonly stated locating and non-emptiness constraints are |xy| ≤ p (y lies within the first p symbols) and |y| ≥ 1 (y is non-empty). The full lemma also asserts the pumping property (for all i ≥ 0, xy^i z ∈ L).",
+        "c": "Incorrect. This option describes the pumping property rather than the two locating/non-emptiness constraints asked for here.",
+        "d": "Incorrect. This mixes up the inequalities and does not capture the standard constraints."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
