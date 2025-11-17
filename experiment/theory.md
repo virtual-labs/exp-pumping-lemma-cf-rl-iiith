@@ -16,6 +16,11 @@ If L is a regular language, then there exists a positive integer p (called the p
 
 The pumping lemma for regular languages arises from the finite nature of automata. Since a DFA has only finitely many states, any sufficiently long string must cause the automaton to visit some state more than once, creating a loop. This loop corresponds to the pumpable portion y.
 
+### The pigeonhole principle
+
+The pigeonhole principle is a very simple counting fact: if you put more items (pigeons) into fewer boxes (holes), at least one box must contain more than one item. For example, if three socks are placed into two drawers, one drawer must hold at least two socks. 
+In the context of automata, think of the DFA's states as the "holes" and positions in an input prefix as the "pigeons." If you read p+1 input positions but the DFA has only p states, some state must repeat — that repeated state marks a loop (the pumpable substring).
+
 ### Intuition with pigeonhole principle
 
 One simple and illuminating way to understand the pumping lemma — emphasised by Kozen — is to view it as a direct application of the pigeonhole principle rather than a mysterious quantified statement.
